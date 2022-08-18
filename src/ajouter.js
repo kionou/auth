@@ -3,13 +3,16 @@ import { useState } from "react";
 const Ajouter = () => {
     const [title,setTitle]=useState('');
     const [author,setAuthor]=useState('');
-    const [body,setBody]=useState('')
+    const [body,setBody]=useState('');
+    const HandlBlogAdding = (e)=>{
+        e.preventDefault()
+    }
 
     return ( 
       
         
             <div className="create-blog">
-                <form  className="form">
+                <form onSubmit={HandlBlogAdding} className="form">
                     <div className="form-group">
                         <label htmlFor="title">Titre de l'article</label>
                         <input 
